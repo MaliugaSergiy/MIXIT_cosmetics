@@ -1,0 +1,524 @@
+body {
+    padding-bottom: 500px;
+}
+
+.header {
+    .header_top {
+        padding: 15px 0;
+        background-color: $bg_gray;
+        .wr {
+            display: flex;
+            justify-content: space-between;
+            ul {
+                display: flex;
+                font-size: 14px;
+                font-weight: 600;
+                li {
+                    a {
+                        color: $grey3;
+
+                        .ico {
+                            margin-right: 10px;
+                        }
+                        .info {}
+                        &.map {
+                            margin-right: 35px;
+                        }
+                        &.telephon {
+                            color: $grey2;
+                            margin-right: 20px;
+                        }
+                        &.call_back {}
+
+                    }
+                }
+            }
+            .coll_right {
+                ul {
+                    li {
+                        margin-right: 20px;
+                        a {}
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .header_logo {
+        .wr {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 20px;
+            align-items: center;
+            .coll {
+                flex-basis: 33.33%;
+                flex-grow: 1;
+                .wrap_input {
+                    position: relative;
+                    max-width: 245px;
+                    input {
+                        font-family: ProximaNovaL;
+                        font-size: 14px;
+                        padding: 10px 25px;
+                        border-radius: 25px;
+                        border: 1px solid $grey1;
+                        letter-spacing: 0.5px;
+                        width: 100%;
+                    }
+                    button {
+                        position: absolute;
+                        right: 15px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        border: none;
+                        cursor: pointer;
+                    }
+                }
+                .wrap_logo {
+                    display: -webkit-flex;
+                    display: -moz-flex;
+                    display: -ms-flex;
+                    display: -o-flex;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .name {
+                        color: $grey2;
+                        font-size: 14px;
+                        margin-top: 10px;
+                    }
+                }
+                .wrap_right {
+                    display: flex;
+                    justify-content: flex-end;
+                    li {
+                        margin-right: 30px;
+                        a {}
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .header_nav {
+        border-top: 1px solid $grey1;
+        border-bottom: 1px solid $grey1;
+
+        .wr {
+            ul {
+                width: 100%;
+
+                display: flex;
+                justify-content: space-between;
+                li {
+                    flex-grow: 1;
+                    a {
+                        display: block;
+                        text-align: center;
+                        padding: 25px 0;
+                        color: $grey4;
+                        font-size: 16px;
+
+                    }
+
+                }
+            }
+
+        }
+    }
+}
+
+.breadcrumbs {
+    .wr {
+        padding: 30px 20px;
+        ul {
+            display: flex;
+            align-items: center;
+            li {
+
+                &:after {
+                    content: ">";
+                    display: inline-block;
+                    color: $grey2;
+                    margin: 0 10px;
+                    font-size: 14px;
+                }
+                a {
+                    font-size: 14px;
+                    color: $grey2;
+
+                }
+                &:last-child:after {
+                    display: none;
+                }
+                &:last-child a {
+                    color: $grey4;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+}
+
+.basket_container {
+    .wr {
+        h1 {
+            text-align: center;
+            font-family: "MyriadProRegular";
+            font-weight: 500;
+            margin-bottom: 50px;
+
+        }
+        .alert {
+            text-align: center;
+            font-size: 16px;
+            background-color: $bg_gray2;
+            padding: 5px 0;
+            color: $grey4;
+            font-family: ProximaNovaL;
+            margin-bottom: 50px;
+            b {
+                color: $dark;
+                font-family: "ProximaNovaB";
+            }
+        }
+        .goods_labels {
+            width: 100%;
+            display: flex;
+            border-bottom: 1px solid $grey1;
+            padding-bottom: 15px;
+            @media screen and (max-width: 670px) {
+                display: none;
+            }
+            .item {
+                text-align: center; //                flex-grow: 1;
+                font-size: 14px;
+                &:first-child {
+                    text-align: left;
+                }
+                &.good_info {
+                    flex-basis: 40%;
+                    width: 40%;
+                    @media screen and (max-width: 1024px) {
+                        flex-basis: 60%;
+                        width: 60%;
+                    }
+
+                }
+                &.quantity {
+                    flex-basis: 32%;
+                    width: 32%;
+                    @media screen and (max-width: 1024px) {
+                        flex-basis: 20%;
+                        width: 20%;
+                    }
+                }
+                &.summ {
+                    flex-basis: 18%;
+                    width: 18%;
+                    @media screen and (max-width: 1024px) {
+                        flex-basis: 10%;
+                        width: 10%;
+                    }
+                }
+                &.buttons {
+                    flex-basis: 10%;
+                    width: 10%;
+                    @media screen and (max-width: 1024px) {
+                        flex-basis: 10%;
+                        width: 10%;
+                    }
+                }
+            }
+        }
+        .goods {
+
+            @media screen and (max-width: 670px) {
+                border-top: 1px solid $grey1;
+            }
+            .item_good {
+                width: 100%;
+                display: flex;
+                border-bottom: 1px solid $grey1;
+                padding: 40px 0;
+                align-items: center;
+                @media screen and (max-width: 670px) {
+                    flex-direction: column;
+                    padding: 20px 0;
+
+                }
+                .it {
+                    text-align: center;
+                    flex-grow: 1;
+                    font-size: 14px;
+                    @media screen and (max-width: 670px) {
+                        margin-bottom: 20px;
+                    }
+                    &:first-child {
+                        text-align: left;
+                    }
+                    &.good_info {
+                        flex-basis: 40%;
+                        width: 40%;
+                        display: flex;
+                        align-items: center;
+                        @media screen and (max-width: 1024px) {
+                            flex-basis: 60%;
+                            width: 60%;
+                        }
+                        @media screen and (max-width: 670px) {
+                            flex-basis: auto;
+                            width: 100%;
+                            max-width: 420px;
+                        }
+                        @media screen and (max-width: 420px) {
+                            flex-direction: column;
+                        }
+                        img {
+                            max-width: 80px;
+                            height: auto;
+                            width: 100%;
+                            @media screen and (max-width: 420px) {
+                                margin-bottom: 20px;
+                            }
+                        }
+                        .descr {
+                            margin-left: 40px;
+                            align-items: center;
+                            @media screen and (max-width: 420px) {
+                                margin-left: 0;
+
+                            }
+                            .main_info {
+                                line-height: 20px;
+                                margin-bottom: 10px;
+                            }
+                            .type {
+                                color: $grey2;
+                            }
+                            .add_info {
+                                margin-top: 10px;
+                                &.attention {
+                                    color: $pink;
+                                }
+                                &.wow {
+                                    color: $green;
+                                }
+                            }
+                        }
+                    }
+                    &.quantity {
+                        flex-basis: 32%;
+                        width: 32%;
+                        -webkit-touch-callout: none;
+                        -webkit-user-select: none;
+                        -khtml-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                        &.non-active {
+
+                            color: $grey1;
+                            cursor: not-allowed;
+                            & input,
+                            & button {
+                                color: $grey1;
+                                pointer-events: none;
+
+                            }
+                        }
+                        @media screen and (max-width: 1024px) {
+                            flex-basis: 20%;
+                            width: 20%;
+                        }
+                        @media screen and (max-width: 670px) {
+                            flex-basis: auto;
+                            width: 100%;
+                            &:before {
+                                content: "Количество: ";
+                                margin-right: 10px;
+
+                            }
+                        }
+                        .wrap {
+                            border: 1px solid $grey1;
+                            width: auto;
+                            padding: 8px 15px;
+                            border-radius: 44px;
+                            display: inline-flex;
+                            justify-content: center;
+                            button {
+                                margin: 0;
+                                font-size: 20px;
+                                background: transparent;
+                                border: none;
+
+                            }
+                            input {
+                                max-width: 40px;
+                                text-align: center;
+                                font-family: ProximaNovaB;
+                                font-size: 18px;
+                                border: none;
+                                &::-webkit-outer-spin-button,
+                                &::-webkit-inner-spin-button {
+                                    -webkit-appearance: none;
+                                    margin: 0;
+                                }
+                            }
+                        }
+
+                    }
+                    &.summ {
+                        flex-basis: 18%;
+                        width: 18%;
+                        font-family: ProximaNovaB;
+                        @media screen and (max-width: 1024px) {
+                            flex-basis: 10%;
+                            width: 10%;
+                        }
+                        @media screen and (max-width: 670px) {
+                            flex-basis: auto;
+                            width: 100%;
+                            &:before {
+                                content: "Сумма:  ";
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                    &.buttons {
+                        flex-basis: 10%;
+                        width: 10%;
+                        display: flex;
+                        justify-content: flex-end;
+                        @media screen and (max-width: 1024px) {
+                            flex-basis: 10%;
+                            width: 10%;
+                        }
+                        @media screen and (max-width: 670px) {
+                            flex-basis: auto;
+                            width: 100%;
+                            order: -1;
+                            justify-content: space-between;
+                            flex-direction: row-reverse;
+                        }
+                        .btn {
+                            border: none;
+                            cursor: pointer;
+                            &.heart1 {
+                                opacity: 0.5;
+                                margin-right: 25px;
+                                background-image: url(../img/icons/icons_origin/heart.png);
+                                width: 20px;
+                                height: 17px;
+                                background-color: transparent;
+                                background-size: 20px 17px;
+                                @media screen and (max-width: 1180px) {
+                                    margin-right: 2vw;
+                                }
+                            }
+                            &.close {
+                                width: 15px;
+                                height: 15px;
+                                background-image: url(../img/icons/icons_origin/close.png);
+                                background-color: transparent;
+                                background-size: 15px 15px;
+                                background-repeat: no-repeat;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+
+}
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
