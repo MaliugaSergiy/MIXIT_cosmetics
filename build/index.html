@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 	<script src="https://use.fontawesome.com/1e915ed25e.js"></script>
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -70,14 +70,15 @@
             <div class="coll">
                 <ul class="wrap_right">
                     <li><a href="#" class="account"></a></li>
-                    <li data-num="2"><a href="#" class="heart"></a></li>
+                    <li data-num="10"><a href="#" class="heart"></a></li>
                     <li><a href="#" class="basket"></a></li>
+                    <li><a href="#" class="burger"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
         </div>
     </div>
     <nav class="header_nav">
-<div class="wr">
+        <div class="wr">
             <ul>
                 <li><a href="#">Лицо</a></li>
                 <li><a href="#">Тело</a></li>
@@ -99,7 +100,7 @@
     </div>
 </div>
 
-<div class="basket_container">
+<form action="" class="basket_container">
     <div class="wr">
         <h1>Корзина</h1>
         <div class="alert">
@@ -113,7 +114,7 @@
         </div>
         <div class="goods">
             <div class="item_good">
-                <div class="it good_info">
+                <a href="#" class="it good_info">
                     <img src="img/good_1.png" alt="">
                     <div class="descr">
                         <div class="main_info">
@@ -122,7 +123,7 @@
                         <div class="type">Vitamin Butter</div>
                         <div class="add_info"></div>
                     </div>
-                </div>
+                </a>
                 <div class="it quantity">
                     <div class="wrap">
                         <button class="minus">-</button>
@@ -138,7 +139,7 @@
                 </div>
             </div>
             <div class="item_good">
-                <div class="it good_info">
+                <a href="#" class="it good_info">
                     <img src="img/good_2.png" alt="">
                     <div class="descr">
                         <div class="main_info">
@@ -147,7 +148,7 @@
                         <div class="type">Tiffany soap</div>
                         <div class="add_info"></div>
                     </div>
-                </div>
+                </a>
                 <div class="it quantity">
                     <div class="wrap">
                         <button class="minus">-</button>
@@ -163,7 +164,7 @@
                 </div>
             </div>
             <div class="item_good">
-                <div class="it good_info">
+                <a href="#" class="it good_info">
                     <img src="img/good_1.png" alt="">
                     <div class="descr">
                         <div class="main_info">
@@ -172,23 +173,23 @@
                         <div class="type">Extreme Hot Wrap</div>
                         <div class="add_info attention">Последний</div>
                     </div>
-                </div>
-                <div class="it quantity non-active noselect">
+                </a>
+                <div class="it quantity non-active ">
                     <div class="wrap">
                         <button class="minus">-</button>
-                        <input type="number" class="noselect" size="1" value="1">
+                        <input type="number" size="1" value="1">
                         <button class="plus">+</button>
                     </div>
                 </div>
                 <div class="it summ"><span class="priceGood">1 090</span> P
                 </div>
                 <div class="it buttons">
-                    <button class="btn heart1"></button>
+                    <button class="btn heart1 active"></button>
                     <button class="btn close"></button>
                 </div>
             </div>
             <div class="item_good">
-                <div class="it good_info">
+                <a href="#" class="it good_info">
                     <img src="img/good_3.png" alt="">
                     <div class="descr">
                         <div class="main_info">
@@ -197,7 +198,7 @@
                         <div class="type"></div>
                         <div class="add_info wow">Подарок!</div>
                     </div>
-                </div>
+                </a>
                 <div class="it quantity">
                     <div class="wrap">
                         <button class="minus">-</button>
@@ -208,12 +209,12 @@
                 <div class="it summ"><span class="priceGood">1 090</span> P
                 </div>
                 <div class="it buttons">
-                    <button class="btn heart1"></button>
+                    <!--                    <button class="btn heart1"></button>-->
                     <button class="btn close"></button>
                 </div>
             </div>
             <div class="item_good">
-                <div class="it good_info">
+                <a href="#" class="it good_info">
                     <img src="img/good_4.png" alt="">
                     <div class="descr">
                         <div class="main_info">
@@ -222,7 +223,7 @@
                         <div class="type"></div>
                         <div class="add_info"></div>
                     </div>
-                </div>
+                </a>
                 <div class="it quantity">
                     <div class="wrap">
                         <button class="minus">-</button>
@@ -233,18 +234,265 @@
                 <div class="it summ"><span class="priceGood">1 090</span> P
                 </div>
                 <div class="it buttons">
-                    <button class="btn heart1"></button>
+                    <!--
+                    <button class="btn heart1 active"></button>
                     <button class="btn close"></button>
+-->
+                </div>
+            </div>
+        </div>
+
+        <div class="choice_of_packaging">
+            <a href="#" class="choice ">Выбрать подарочню упаковку</a>
+            <div class="basket_row">
+                <div class="start">Стоимость товаров:</div>
+                <!--                <div class="dots"></div>-->
+                <div class="end">
+                    <div class="price">2 280</div> Р
+                </div>
+            </div>
+            <div class="basket_row">
+                <div class="start">Доставка:</div>
+<!--                <div class="dots"></div>-->
+                <div class="end">
+                    <div class="price">0</div> Р
+                </div>
+            </div>
+        </div>
+        <div class="enter_promo">
+            <div class="basket_row">
+                <div class="start">
+                    <div class="inp_wrap">
+                        <input type="text" placeholder="Ввести промокод">
+                    </div>
+                    <button class="submit_promo btn_pink">Применить</button>
+                </div>
+                <div class="end"><span class="name">Итого: </span><span class="total_price">2 280 </span> P</div>
+            </div>
+        </div>
+        <div class="make_order">
+            <button class="quick_order btn_yellowRev">быстрый заказ</button>
+            <button class="to_order btn_yellow">оформить заказ</button>
+        </div>
+    </div>
+</form>
+
+
+<footer class="footer">
+
+    <div class="subscribe">
+        <div class="wr">
+            <div class="basket_row">
+                <div class="start">Получайте акции и специальные предложения</div>
+                <div class="end">
+                    <div class="inp_wrap">
+                        <input type="text" placeholder="Ввести промокод">
+                    </div>
+                    <button class="submit_promo btn_pink">подписаться</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_nav">
+        <div class="wr">
+            <div class="coll">
+                <div class="name">Каталог</div>
+                <ul>
+                    <li><a href="#">Для лица</a></li>
+                    <li><a href="#">Для тела</a></li>
+                    <li><a href="#">Для волос</a></li>
+                    <li><a href="#">Комплекты</a></li>
+                    <li><a href="#">Сертификаты</a></li>
+                </ul>
+            </div>
+            <div class="coll">
+                <div class="name">Помощь</div>
+                <ul>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Оплата</a></li>
+                    <li><a href="#">Обмен и возврат</a></li>
+                </ul>
+            </div>
+            <div class="coll">
+                <div class="name">Помощь</div>
+                <ul>
+                    <li><a href="#">Для лица</a></li>
+                    <li><a href="#">Для тела</a></li>
+                    <li><a href="#">Для волос</a></li>
+                    <li><a href="#">Комплекты</a></li>
+                    <li><a href="#">Сертификаты</a></li>
+                </ul>
+            </div>
+            <div class="coll">
+                <div class="name">Компания</div>
+                <ul>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Пользовательские соглашения</a></li>
+                    <li><a href="#">Франшиза</a></li>
+                </ul>
+                <div class="shedule">
+                    <a href="tel:84952520743" class="contact_tell">8 (495) 525-07-43</a>
+                    <div class="shedule_info"> Ежедневно с 09:00 до 21:00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_bottom_links">
+        <div class="wr">
+            <div class="coll">
+                <div class="name">Copyright © 2014-2017<br/> ООО ЭкоКосметик”</div>
+            </div>
+            <div class="coll">
+                <div class="name">Наши аккаунты в соц сетях</div>
+                <ul>
+                    <li><a href="#" class="round"><span class="ico insta"></span></a></li>
+                    <li><a href="#" class="round"><span class="ico vk"></span></a></li>
+                    <li><a href="#" class="round"><span class="ico facebook"></span></a></li>
+                </ul>
+            </div>
+            <div class="coll">
+                <div class="name">Способы оплаты</div>
+                <ul>
+                    <li><a href="#" class="master-card"></a></li>
+                </ul>
+            </div>
+            <div class="coll">
+                <div class="name">Скачайте наше приложение</div>
+                <ul>
+                    <li><a href="#" class="round"><span class="ico mac"></span></a></li>
+                    <li><a href="#" class="round"><span class="ico android"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="maked_by">
+        <p>Сделано в <a href="#">Prism Solution</a></p>
+    </div>
+
+</footer>
+<div class="modals">
+    <div class="overlay"></div>
+    <div class="modal">
+        <button class="close" role="button">X</button>
+        <h2 class="name">Выберите подарок</h2>
+        <div class="present_container">
+            <div class="item">
+                <a href="#" class="good">
+                    <span class="img"> </span>
+                    <span class="type"></span>
+                    <span class="decsr">Бальзам для всех типов волос с маслом макадамии</span>
+                </a>
+                <div class="price">
+                    <div class="old_price">
+                        <div class="num">145</div> P
+                    </div>
+                    <div class="real_price">
+                        <div class="num">0</div> Р
+                    </div>
+                </div>
+                <div class="bottom">
+                    <a href="" class="quick_view"><span class="ico search"></span></a>
+                    <a href="" class="add_to_basket btn_transp">Добавить в корзину</a>
+                </div>
+            </div>
+            <div class="item">
+                <a href="#" class="good">
+                    <span class="img"> </span>
+                    <span class="type"></span>
+                    <span class="decsr">Бальзам для всех типов волос с маслом макадамии</span>
+                </a>
+                <div class="price">
+                    <div class="old_price">
+                        <div class="num">145</div> P
+                    </div>
+                    <div class="real_price">
+                        <div class="num">0</div> Р
+                    </div>
+                </div>
+                <div class="bottom">
+                    <a href="" class="quick_view"><span class="ico search"></span></a>
+                    <a href="" class="add_to_basket btn_transp">Добавить в корзину</a>
+                </div>
+            </div>
+            <div class="item">
+                <a href="#" class="good">
+                    <span class="img"> </span>
+                    <span class="type"></span>
+                    <span class="decsr">Бальзам для всех типов волос с маслом макадамии</span>
+                </a>
+                <div class="price">
+                    <div class="old_price">
+                        <div class="num">145</div> P
+                    </div>
+                    <div class="real_price">
+                        <div class="num">0</div> Р
+                    </div>
+                </div>
+                <div class="bottom">
+                    <a href="" class="quick_view"><span class="ico search"></span></a>
+                    <a href="" class="add_to_basket btn_transp">Добавить в корзину</a>
+                </div>
+            </div>
+            <div class="item">
+                <a href="#" class="good">
+                    <span class="img"> </span>
+                    <span class="type"></span>
+                    <span class="decsr">Бальзам для всех типов волос с маслом макадамии</span>
+                </a>
+                <div class="price">
+                    <div class="old_price">
+                        <div class="num">145</div> P
+                    </div>
+                    <div class="real_price">
+                        <div class="num">0</div> Р
+                    </div>
+                </div>
+                <div class="bottom">
+                    <a href="" class="quick_view"><span class="ico search"></span></a>
+                    <a href="" class="add_to_basket btn_transp">Добавить в корзину</a>
+                </div>
+            </div>
+            <div class="item">
+                <a href="#" class="good">
+                    <span class="img"> </span>
+                    <span class="type"></span>
+                    <span class="decsr">Бальзам для всех типов волос с маслом макадамии</span>
+                </a>
+                <div class="price">
+                    <div class="old_price">
+                        <div class="num">145</div> P
+                    </div>
+                    <div class="real_price">
+                        <div class="num">0</div> Р
+                    </div>
+                </div>
+                <div class="bottom">
+                    <a href="" class="quick_view"><span class="ico search"></span></a>
+                    <a href="" class="add_to_basket btn_transp">Добавить в корзину</a>
+                </div>
+            </div>
+            <div class="item">
+                <a href="#" class="good">
+                    <span class="img"> </span>
+                    <span class="type"></span>
+                    <span class="decsr">Бальзам для всех типов волос с маслом макадамии</span>
+                </a>
+                <div class="price">
+                    <div class="old_price">
+                        <div class="num">145</div> P
+                    </div>
+                    <div class="real_price">
+                        <div class="num">0</div> Р
+                    </div>
+                </div>
+                <div class="bottom">
+                    <a href="" class="quick_view"><span class="ico search"></span></a>
+                    <a href="" class="add_to_basket btn_transp">Добавить в корзину</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
-
-
-
 
 
 

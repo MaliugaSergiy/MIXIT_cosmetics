@@ -1,5 +1,5 @@
 <!--#insert file="html/-top.html"-->
-<div class="basket_container">
+<form action="" class="basket_container">
     <div class="wr">
         <h1>Корзина</h1>
         <div class="alert">
@@ -13,7 +13,7 @@
         </div>
         <div class="goods">
             <div class="item_good">
-                <div class="it good_info">
+                <a href="#" class="it good_info">
                     <img src="img/good_1.png" alt="">
                     <div class="descr">
                         <div class="main_info">
@@ -22,7 +22,7 @@
                         <div class="type">Vitamin Butter</div>
                         <div class="add_info"></div>
                     </div>
-                </div>
+                </a>
                 <div class="it quantity">
                     <div class="wrap">
                         <button class="minus">-</button>
@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div class="item_good">
-                <div class="it good_info">
+                <a href="#" class="it good_info">
                     <img src="img/good_2.png" alt="">
                     <div class="descr">
                         <div class="main_info">
@@ -47,7 +47,7 @@
                         <div class="type">Tiffany soap</div>
                         <div class="add_info"></div>
                     </div>
-                </div>
+                </a>
                 <div class="it quantity">
                     <div class="wrap">
                         <button class="minus">-</button>
@@ -63,7 +63,7 @@
                 </div>
             </div>
             <div class="item_good">
-                <div class="it good_info">
+                <a href="#" class="it good_info">
                     <img src="img/good_1.png" alt="">
                     <div class="descr">
                         <div class="main_info">
@@ -72,23 +72,23 @@
                         <div class="type">Extreme Hot Wrap</div>
                         <div class="add_info attention">Последний</div>
                     </div>
-                </div>
-                <div class="it quantity non-active noselect">
+                </a>
+                <div class="it quantity non-active ">
                     <div class="wrap">
                         <button class="minus">-</button>
-                        <input type="number" class="noselect" size="1" value="1">
+                        <input type="number" size="1" value="1">
                         <button class="plus">+</button>
                     </div>
                 </div>
                 <div class="it summ"><span class="priceGood">1 090</span> P
                 </div>
                 <div class="it buttons">
-                    <button class="btn heart1"></button>
+                    <button class="btn heart1 active"></button>
                     <button class="btn close"></button>
                 </div>
             </div>
             <div class="item_good">
-                <div class="it good_info">
+                <a href="#" class="it good_info">
                     <img src="img/good_3.png" alt="">
                     <div class="descr">
                         <div class="main_info">
@@ -97,7 +97,7 @@
                         <div class="type"></div>
                         <div class="add_info wow">Подарок!</div>
                     </div>
-                </div>
+                </a>
                 <div class="it quantity">
                     <div class="wrap">
                         <button class="minus">-</button>
@@ -108,12 +108,12 @@
                 <div class="it summ"><span class="priceGood">1 090</span> P
                 </div>
                 <div class="it buttons">
-                    <button class="btn heart1"></button>
+                    <!--                    <button class="btn heart1"></button>-->
                     <button class="btn close"></button>
                 </div>
             </div>
             <div class="item_good">
-                <div class="it good_info">
+                <a href="#" class="it good_info">
                     <img src="img/good_4.png" alt="">
                     <div class="descr">
                         <div class="main_info">
@@ -122,7 +122,7 @@
                         <div class="type"></div>
                         <div class="add_info"></div>
                     </div>
-                </div>
+                </a>
                 <div class="it quantity">
                     <div class="wrap">
                         <button class="minus">-</button>
@@ -133,13 +133,48 @@
                 <div class="it summ"><span class="priceGood">1 090</span> P
                 </div>
                 <div class="it buttons">
-                    <button class="btn heart1"></button>
+                    <!--
+                    <button class="btn heart1 active"></button>
                     <button class="btn close"></button>
+-->
                 </div>
             </div>
         </div>
+
+        <div class="choice_of_packaging">
+            <a href="#" class="choice ">Выбрать подарочню упаковку</a>
+            <div class="basket_row">
+                <div class="start">Стоимость товаров:</div>
+                <!--                <div class="dots"></div>-->
+                <div class="end">
+                    <div class="price">2 280</div> Р
+                </div>
+            </div>
+            <div class="basket_row">
+                <div class="start">Доставка:</div>
+<!--                <div class="dots"></div>-->
+                <div class="end">
+                    <div class="price">0</div> Р
+                </div>
+            </div>
+        </div>
+        <div class="enter_promo">
+            <div class="basket_row">
+                <div class="start">
+                    <div class="inp_wrap">
+                        <input type="text" placeholder="Ввести промокод">
+                    </div>
+                    <button class="submit_promo btn_pink">Применить</button>
+                </div>
+                <div class="end"><span class="name">Итого: </span><span class="total_price">2 280 </span> P</div>
+            </div>
+        </div>
+        <div class="make_order">
+            <button class="quick_order btn_yellowRev">быстрый заказ</button>
+            <button class="to_order btn_yellow">оформить заказ</button>
+        </div>
     </div>
-</div>
+</form>
 
 
 <!--#insert file="html/-bottom.html"-->
