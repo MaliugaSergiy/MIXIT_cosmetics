@@ -3061,6 +3061,10 @@ button:hover
     min-width: 25%;
     padding: 0 20px;
 
+    -webkit-transition: .5s;
+         -o-transition: .5s;
+            transition: .5s; 
+
     -webkit-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
             flex-basis: 25%;
