@@ -91,10 +91,6 @@ $(document).ready(function () {
                 amount_not_scroll_steps = corousel_container_width / carousel_item_width,
                 max_amount_of_scrolled_steps = Math.round(item_amount - amount_not_scroll_steps),
                 item_translation;
-            
-            console.log(item_amount);
-            console.log(amount_not_scroll_steps);
-            console.log(max_amount_of_scrolled_steps);
 
             if (direction) {
                 if (scrolled_position == max_amount_of_scrolled_steps) {
@@ -120,34 +116,30 @@ $(document).ready(function () {
             });
         }
 
-        //        $(".corousel_left").on("click", function (event) {
-        //            event = event || window.event;
-        //            event.preventDefault();
-        //            move_slide(0);
-        //        });
-        //        
-        //        $(".corousel_right").on("click", function (event) {
-        //            event = event || window.event;
-        //            event.preventDefault();
-        //            move_slide(1);
-        //        });
-
         $(".corousel_left, .corousel_right").on("click", move_slide);
 
         function setTransitionToItems() {
             let scrolled_position = +corousel_container.attr("data-scrolled"),
+                corousel_container_width = corousel_container.outerWidth(),
                 carousel_item_width = carousel_item.outerWidth(),
+                amount_not_scroll_steps = corousel_container_width / carousel_item_width,
+                max_amount_of_scrolled_steps = Math.round(item_amount - amount_not_scroll_steps),
                 item_translation;
 
+            if (scrolled_position > max_amount_of_scrolled_steps ) {
+                scrolled_position = max_amount_of_scrolled_steps;
+                corousel_container.attr("data-scrolled", scrolled_position);
+            }
+            
             item_translation = scrolled_position * carousel_item_width * -1;
             carousel_item.each(function () {
                 $(this).eq(0).css('transform', 'translateX(' + item_translation + 'px)');
             });
         }
 
-        $(window).on("resize", setTransitionToItems);
-        setTimeout(setTransitionToItems, 1000);
-        
+        $(window).on("resize", function(){
+            setTimeout(setTransitionToItems, 550);
+        });
 
     })();
 
