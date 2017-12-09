@@ -81,16 +81,23 @@ $(document).ready(function () {
             item_amount = carousel_item.length;
 
         function move_slide(event) {
+            event = event || window.event;
             event.preventDefault();
             let scrolled_position = +corousel_container.attr("data-scrolled"),
                 corousel_container_width = corousel_container.outerWidth(),
                 carousel_item_width = carousel_item.outerWidth(),
                 total_width_of_items = carousel_item_width * item_amount,
                 direction = $(this).data("direction"),
+                amount_not_scroll_steps = corousel_container_width / carousel_item_width,
+                max_amount_of_scrolled_steps = Math.round(item_amount - amount_not_scroll_steps),
                 item_translation;
+            
+            console.log(item_amount);
+            console.log(amount_not_scroll_steps);
+            console.log(max_amount_of_scrolled_steps);
 
             if (direction) {
-                if (scrolled_position == item_amount) {
+                if (scrolled_position == max_amount_of_scrolled_steps) {
                     scrolled_position = 0;
                 } else {
                     scrolled_position++;
@@ -98,7 +105,7 @@ $(document).ready(function () {
 
             } else {
                 if (scrolled_position == 0) {
-                    scrolled_position = item_amount;
+                    scrolled_position = max_amount_of_scrolled_steps;
                 } else {
                     scrolled_position--;
                 }
@@ -139,7 +146,8 @@ $(document).ready(function () {
         }
 
         $(window).on("resize", setTransitionToItems);
-        setTransitionToItems();
+        setTimeout(setTransitionToItems, 1000);
+        
 
     })();
 
