@@ -48,8 +48,9 @@ button:hover {
         box-shadow: 0px 0px 10px 1px transparentize($pink, 0.2);
     }
 }
+
 .btn_transp {
-    border: 1px solid  $grey1;
+    border: 1px solid $grey1;
     background-color: transparent;
     color: $grey2;
     text-transform: uppercase;
@@ -622,8 +623,7 @@ button:hover {
                             flex-basis: auto;
                             width: 100%;
                             order: -1;
-                            justify-content: space-between;
-//                            flex-direction: row-reverse;
+                            justify-content: space-between; //                            flex-direction: row-reverse;
                         }
                         .btn {
                             border: none;
@@ -1038,19 +1038,19 @@ button:hover {
     .modal {
         overflow-y: scroll;
         position: fixed;
-        max-height: 95vh;
+        max-height: 90vh;
         top: 50%;
-        left: 50%;
-        //        width: 400px;
+        left: 50%; //        width: 400px;
         //        height: 300px;
         width: 90%;
         max-width: 960px;
         padding: 40px 40px 0 40px;
         background: $white;
         z-index: 100;
+        box-shadow: 5px 5px 10px 0px transparentize($dark, 0.3);
         transform: translate(-50%, -50%);
-                visibility: hidden;
-                opacity: 0;
+        visibility: hidden;
+        opacity: 0;
         h2 {
             font-family: "MyriadProRegular";
             font-weight: normal;
@@ -1086,8 +1086,8 @@ button:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     @media screen and (max-width: 1040px) {
-            justify-content: space-around;
-        }
+        justify-content: space-around;
+    }
     .item {
         margin-bottom: 50px;
         padding: 0 20px;
@@ -1116,11 +1116,6 @@ button:hover {
                 background-repeat: no-repeat;
                 background-position: 95px center;
                 background-size: contain;
-                //                img {
-                //                    width: 100%;
-                //                    height: auto;
-                //                    
-                //                }
             }
             .type {}
             .decsr {
@@ -1170,7 +1165,7 @@ button:hover {
             justify-content: space-between;
             font-family: "MyriadProRegular";
             .quick_view {
-                
+
                 display: block;
                 width: 40px;
                 height: 40px;
@@ -1185,12 +1180,175 @@ button:hover {
                 }
             }
             .add_to_basket {
-                font-size: 12px;    
+                font-size: 12px;
                 text-transform: uppercase;
                 padding: 15px 25px;
             }
         }
     }
+}
+
+.viewed_earlier {
+    margin: 100px 0;
+    h2 {
+        text-align: center;
+        font-size: 24px;
+    }
+    .h2_descr {
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+    .carousel_outer {
+        width: 100%;
+        position: relative;
+        margin: 30px 0;
+//        border: 1px solid pink;
+        display: flex;
+        
+        .corousel_container {
+            display: inline-flex;
+//            border: 1px solid red;
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            @media screen and (max-width: 570px) {
+                max-width: 350px;
+            }
+
+            .item {
+                padding: 0 20px;
+                flex-basis: 25%;
+                min-width: 25%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+//                border: 1px solid #000;
+                @media screen and (max-width: 1070px) {
+                    flex-basis: 33.333%;
+                    min-width: 33.333%;
+                }
+                @media screen and (max-width: 810px) {
+                    flex-basis: 50%;
+                    min-width: 50%;
+                }
+                @media screen and (max-width: 570px) {
+                    flex-basis: 100%;
+                    min-width: 100%;
+                }
+
+                .good {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    .img {
+                        height: 240px;
+                        width: 100%;
+                        background-image: url(../img/pres_1.png);
+                        background-repeat: no-repeat;
+                        background-position: 95px center;
+                        background-size: contain;
+                    }
+                    .type {}
+                    .decsr {
+                        font-size: 16px;
+                        color: $grey4;
+                        text-align: center;
+                        display: block;
+                        margin: 20px 0 30px;
+                        max-width: 195px;
+                    }
+                }
+                .price {
+                    font-family: Arial;
+                    display: flex;
+                    justify-content: center;
+                    .num {
+                        margin-right: 5px;
+                    }
+                    .old_price {
+                        color: $grey2;
+                        margin: 0 5px;
+                        display: flex;
+                        position: relative;
+                        &:after {
+                            content: '';
+                            display: block;
+                            width: 100%;
+                            height: 1px;
+                            background-color: $grey2;
+                            top: 50%;
+                            left: 0;
+                            position: absolute;
+                        }
+                        .num {}
+                    }
+                    .real_price {
+                        margin: 0 5px;
+                        display: flex;
+                        font-family: ProximaNovaB;
+                        .num {}
+                    }
+                }
+                .bottom {
+                    margin-top: 20px;
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    font-family: "MyriadProRegular";
+                    max-width: 230px;
+                    .quick_view {
+
+                        display: block;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        border: 1px solid $grey1;
+                        position: relative;
+                        .ico {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                    .add_to_basket {
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        padding: 15px 25px;
+                    }
+                }
+            }
+        }
+        .carousel_nav {
+            position: absolute;
+            left: -40px;
+            right: -45px;
+            bottom: 0;
+            pointer-events: none;
+            top: 0; //            border: 1px solid green;
+            @media screen and (max-width: 1250px) {
+                left: 0px;
+                right: 0px;
+            }
+            .carousel_btn {
+                pointer-events: auto;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+
+            }
+            .corousel_left {
+                left: 0;
+            }
+            .corousel_right {
+                right: 0;
+            }
+        }
+    }
+
 }
 
 
