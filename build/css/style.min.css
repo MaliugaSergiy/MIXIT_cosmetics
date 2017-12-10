@@ -3348,6 +3348,114 @@ button:hover
     right: 0;
 }
 
+.tooltip
+{
+    position: absolute;
+    z-index: 1;
+
+    display: none; 
+
+    max-width: 220px;
+    padding: 30px 20px;
+
+    -webkit-transform: translate(-50%, -100%);
+        -ms-transform: translate(-50%, -100%);
+            transform: translate(-50%, -100%);
+
+    color: #1f242e;
+    background-color: #fff;
+    background-color: #fff;
+    -webkit-box-shadow: 0 5px 30px 0 rgba(0, 0, 0, .2);
+            box-shadow: 0 5px 30px 0 rgba(0, 0, 0, .2);
+}
+.tooltip:before
+{
+    position: absolute;
+    z-index: 0; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+
+    background-color: #fff;
+}
+.tooltip:after
+{
+    position: absolute;
+    z-index: -1;
+    top: 94%;
+    left: 50%;
+
+    width: 15px;
+    height: 15px;
+
+    content: '';
+    -webkit-transform: translateX(-50%) rotate(45deg);
+        -ms-transform: translateX(-50%) rotate(45deg);
+            transform: translateX(-50%) rotate(45deg);
+
+    background-color: #fff; 
+    -webkit-box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, .2);
+            box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, .2);
+}
+.tooltip .close_tooltip
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 15px;
+    height: 15px;
+
+    cursor: pointer;
+
+    color: #000;
+    border: 0; 
+    background-color: transparent;
+    background-color: transparent;
+    background-image: url(../img/icons/icons_origin/close.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: 15px 15px;
+            background-size: 15px 15px;
+}
+.tooltip .name
+{
+    font-family: ProximaNovaB;
+    font-size: 14px;
+
+    position: relative;
+}
+.tooltip .descr
+{
+    font-family: 'MyriadProRegular';
+    font-size: 12px;
+
+    position: relative; 
+
+    margin-top: 15px;
+    margin-left: 12px;
+}
+.tooltip .descr:before
+{
+    position: absolute;
+    top: -5px; 
+    left: -12px;
+
+    display: block;
+
+    width: 2px;
+    height: 25px;
+
+    content: '';
+
+    background-color: #ffd200;
+}
+
 /*  */
 /*  */
 /*  */

@@ -1378,6 +1378,84 @@ button:hover {
 
 }
 
+.tooltip {
+    position: absolute;
+//    top: 50%;
+//    left: 50%;
+//    transform: translate(-50%, -50%);
+    transform: translate(-50%, -100%);
+    padding: 30px 20px;
+    background-color: $white;
+    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.2);
+    background-color: $white;
+    max-width: 220px;
+    color: $dark;
+    z-index: 1;
+    display: none;
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #fff;
+        z-index: 0;
+
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        height: 15px;
+        width: 15px;
+        top: 94%;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        z-index: -1;
+        box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.2);
+        background-color: $white;
+    }
+
+    .close_tooltip {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 15px;
+        height: 15px;
+        background-image: url(../img/icons/icons_origin/close.png);
+        background-color: transparent;
+        background-size: 15px 15px;
+        background-repeat: no-repeat;
+        color: #000;
+        cursor: pointer;
+        background-color: transparent;
+        border: 0;
+    }
+    .name {
+        font-size: 14px;
+        font-family: ProximaNovaB;
+        position: relative;
+    }
+    .descr {
+        font-size: 12px;
+        font-family: "MyriadProRegular";
+        margin-left: 12px;
+        margin-top: 15px;
+        position: relative;
+        &:before {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 2px;
+            height: 25px;
+            background-color: $yell;
+            left: -12px;
+            top: -5px;
+        }
+    }
+}
 
 
 /*  */

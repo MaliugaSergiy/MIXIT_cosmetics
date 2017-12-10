@@ -126,21 +126,41 @@ $(document).ready(function () {
                 max_amount_of_scrolled_steps = Math.round(item_amount - amount_not_scroll_steps),
                 item_translation;
 
-            if (scrolled_position > max_amount_of_scrolled_steps ) {
+            if (scrolled_position > max_amount_of_scrolled_steps) {
                 scrolled_position = max_amount_of_scrolled_steps;
                 corousel_container.attr("data-scrolled", scrolled_position);
             }
-            
+
             item_translation = scrolled_position * carousel_item_width * -1;
             carousel_item.each(function () {
                 $(this).eq(0).css('transform', 'translateX(' + item_translation + 'px)');
             });
         }
 
-        $(window).on("resize", function(){
+        $(window).on("resize", function () {
             setTimeout(setTransitionToItems, 550);
         });
 
+    })();
+
+    (function showTooltip() {
+        let tooltip = $(".tooltip").eq(0);
+        $(".show_tooltip").on("mouseover", function () {
+            let topOffset = $(this).offset().top,
+                leftOffset = $(this).offset().left;
+            tooltip.css({
+                left: leftOffset + 20,
+                top: topOffset - 15
+            }).stop().slideDown();
+        });
+        $(".show_tooltip").on("mouseleave", function () {
+            setTimeout(function(){
+                tooltip.stop().slideUp();
+            }, 1000);
+        });
+        $(".close_tooltip").on("click", function () {
+            $(this).parent().slideUp();
+        });
     })();
 
 });
