@@ -272,6 +272,7 @@ button:hover {
                             justify-content: center;
                             align-items: center;
                             content: attr(data-num);
+                            pointer-events: none;
                         }
                         margin-right: 30px;
                         a {
@@ -324,6 +325,9 @@ button:hover {
                         padding: 25px 0;
                         color: $grey4;
                         font-size: 16px;
+                        &:hover {
+                            color: $green;
+                        }
                         @media screen and (max-width: 920px) {
                             padding: 10px 0;
                             max-width: 200px;
@@ -472,6 +476,9 @@ button:hover {
                         width: 40%;
                         display: flex;
                         align-items: center;
+                        &:hover .descr .main_info {
+                            color: $green;
+                        }
                         @media screen and (max-width: 1024px) {
                             flex-basis: 60%;
                             width: 60%;
@@ -504,6 +511,7 @@ button:hover {
                                 margin-bottom: 10px;
                                 color: $dark;
                                 font-weight: 600;
+                                transition: 0.3s;
                             }
                             .type {
                                 color: $grey2;
@@ -651,6 +659,9 @@ button:hover {
                                 background-color: transparent;
                                 background-size: 15px 15px;
                                 background-repeat: no-repeat;
+                                &:hover {
+                                    background-image: url(../img/icons/icons_origin/close_h2.png);
+                                }
                             }
                         }
                     }
@@ -859,6 +870,9 @@ button:hover {
                         a {
                             color: $grey2;
                             display: inline-block;
+                            &:hover {
+                                color: $green;
+                            }
 
                             @media screen and (max-width: 640px) {
                                 max-width: 110px;
@@ -879,6 +893,9 @@ button:hover {
                         color: $dark;
                         letter-spacing: 1.5px;
                         font-family: ProximaNovaR;
+                        &:hover {
+                            color: $green;
+                        }
                     }
                     .shedule_info {
                         font-size: 14px;
@@ -1202,13 +1219,11 @@ button:hover {
     .carousel_outer {
         width: 100%;
         position: relative;
-        margin: 30px 0;
-//        border: 1px solid pink;
+        margin: 30px 0; //        border: 1px solid pink;
         display: flex;
-        
+
         .corousel_container {
-            display: inline-flex;
-//            border: 1px solid red;
+            display: inline-flex; //            border: 1px solid red;
             width: 100%;
             margin: 0 auto;
             overflow: hidden;
@@ -1223,8 +1238,7 @@ button:hover {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                transition: 0.5s;
-//                border: 1px solid #000;
+                transition: 0.5s; //                border: 1px solid #000;
                 @media screen and (max-width: 1070px) {
                     flex-basis: 33.333%;
                     min-width: 33.333%;
@@ -1244,6 +1258,12 @@ button:hover {
                     justify-content: center;
                     align-items: center;
                     width: 100%;
+                    &:hover .decsr {
+                        color: $green;
+                    }
+                    &:hover .type {
+                        color: $pink;
+                    }
                     .img {
                         height: 240px;
                         width: 100%;
@@ -1252,14 +1272,20 @@ button:hover {
                         background-position: 95px center;
                         background-size: contain;
                     }
-                    .type {}
+                    .type {
+                        font-size: 14px;
+                        margin-top: 30px;
+                        color: $grey3;
+                        transition: 0.3s;
+                    }
                     .decsr {
                         font-size: 16px;
                         color: $grey4;
                         text-align: center;
                         display: block;
-                        margin: 20px 0 30px;
+                        margin: 15px 0 30px;
                         max-width: 195px;
+                        transition: 0.3s;
                     }
                 }
                 .price {

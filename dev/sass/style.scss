@@ -28,6 +28,7 @@ a {
     outline: none;
     text-decoration: none;
     transition: 0.3s;
+
     &:after, &:before {
        transition: 0.3s; 
     }

@@ -1366,7 +1366,8 @@ button:hover
     width: 15px;
     height: 15px;
 
-    content: attr(data-num); 
+    content: attr(data-num);
+    pointer-events: none; 
 
     color: #fff;
     -webkit-border-radius: 50%;
@@ -1468,6 +1469,10 @@ button:hover
     text-align: center;
 
     color: #404751;
+}
+.header .header_nav .wr ul li a:hover
+{
+    color: #00bd89;
 }
 @media screen and (max-width: 920px)
 {
@@ -1738,6 +1743,10 @@ button:hover
     -ms-flex-align: center;
             align-items: center;
 }
+.basket_container .wr .goods .item_good .it.good_info:hover .descr .main_info
+{
+    color: #00bd89;
+}
 @media screen and (max-width: 1024px)
 {
     .basket_container .wr .goods .item_good .it.good_info
@@ -1804,10 +1813,14 @@ button:hover
 }
 .basket_container .wr .goods .item_good .it.good_info .descr .main_info
 {
-    font-weight: 600; 
+    font-weight: 600;
     line-height: 20px;
 
     margin-bottom: 10px;
+
+    -webkit-transition: .3s;
+         -o-transition: .3s;
+            transition: .3s; 
 
     color: #1f242e;
 }
@@ -2071,6 +2084,10 @@ button:hover
     background-repeat: no-repeat; 
     -webkit-background-size: 15px 15px;
             background-size: 15px 15px;
+}
+.basket_container .wr .goods .item_good .it.buttons .btn.close:hover
+{
+    background-image: url(../img/icons/icons_origin/close_h2.png);
 }
 
 .basket_container .wr .choice_of_packaging
@@ -2446,6 +2463,10 @@ button:hover
 
     color: #a0a7b1;
 }
+.footer .footer_nav .wr .coll ul li a:hover
+{
+    color: #00bd89;
+}
 @media screen and (max-width: 640px)
 {
     .footer .footer_nav .wr .coll ul li a
@@ -2478,6 +2499,10 @@ button:hover
     letter-spacing: 1.5px;
 
     color: #1f242e;
+}
+.footer .footer_nav .wr .coll .shedule .contact_tell:hover
+{
+    color: #00bd89;
 }
 .footer .footer_nav .wr .coll .shedule .shedule_info
 {
@@ -3133,6 +3158,14 @@ button:hover
     -ms-flex-align: center;
             align-items: center;
 }
+.viewed_earlier .carousel_outer .corousel_container .item .good:hover .decsr
+{
+    color: #00bd89;
+}
+.viewed_earlier .carousel_outer .corousel_container .item .good:hover .type
+{
+    color: #ff485a;
+}
 .viewed_earlier .carousel_outer .corousel_container .item .good .img
 {
     width: 100%;
@@ -3144,15 +3177,30 @@ button:hover
     -webkit-background-size: contain;
             background-size: contain;
 }
+.viewed_earlier .carousel_outer .corousel_container .item .good .type
+{
+    font-size: 14px;
+
+    margin-top: 30px;
+
+    -webkit-transition: .3s;
+         -o-transition: .3s;
+            transition: .3s; 
+
+    color: #808792;
+}
 .viewed_earlier .carousel_outer .corousel_container .item .good .decsr
 {
     font-size: 16px;
 
     display: block;
 
-    max-width: 195px; 
-    margin: 20px 0 30px;
+    max-width: 195px;
+    margin: 15px 0 30px;
 
+    -webkit-transition: .3s;
+         -o-transition: .3s;
+            transition: .3s; 
     text-align: center;
 
     color: #404751;
