@@ -152,6 +152,9 @@ button:hover {
                 li {
                     a {
                         color: $grey3;
+                        &:hover {
+                            color: $pink;
+                        }
 
                         .ico {
                             margin-right: 10px;
@@ -275,7 +278,18 @@ button:hover {
                             pointer-events: none;
                         }
                         margin-right: 30px;
-                        a {
+                        a.rightIco {
+                            
+                            transition: 0.5s;
+                            &.account:hover {
+                              background-image: url('../img/icons/sprite_green.png'); 
+                            }
+                            &.heart:hover {
+                              background-image: url('../img/icons/sprite_pink.png'); 
+                            }
+                            &.basket:hover {
+                              background-image: url('../img/icons/sprite_yellow.png'); 
+                            }
                             &.burger {
                                 display: none;
                                 @media screen and (max-width: 920px) {
@@ -605,6 +619,24 @@ button:hover {
                         flex-basis: 18%;
                         width: 18%;
                         font-family: ProximaNovaB;
+                        .oldPrice {
+                            color: $grey2;
+                            margin-right: 15px;
+                            font-family: ProximaNovaR;
+                            position: relative;
+                            &:before {
+                                position: absolute;
+                                content: "";
+                                display: block;
+//                                width: 100%;
+                                left: -2px;
+                                right: -4px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                height: 1px;
+                                background-color: $grey2;
+                            }
+                        }
                         @media screen and (max-width: 1024px) {
                             flex-basis: 10%;
                             width: 10%;
@@ -1222,7 +1254,7 @@ button:hover {
         margin: 30px 0; //        border: 1px solid pink;
         display: flex;
 
-        .corousel_container {
+        .carousel_container {
             display: inline-flex; //            border: 1px solid red;
             width: 100%;
             margin: 0 auto;
@@ -1262,7 +1294,7 @@ button:hover {
                         color: $green;
                     }
                     &:hover .type {
-                        color: $pink;
+                        color: $dark;
                     }
                     .img {
                         height: 240px;
@@ -1327,18 +1359,26 @@ button:hover {
                     font-family: "MyriadProRegular";
                     max-width: 230px;
                     .quick_view {
-
                         display: block;
                         width: 40px;
                         height: 40px;
                         border-radius: 50%;
                         border: 1px solid $grey1;
                         position: relative;
+                        transition: 0.3s;
+                        &:hover {
+                            border-color: $green;
+                        }
+                        &:hover .ico {
+                            background-image: url('../img/icons/sprite_green.png');
+                            transition: 0.3s;
+                        }
                         .ico {
                             position: absolute;
                             top: 50%;
                             left: 50%;
                             transform: translate(-50%, -50%);
+                            transition: 0.3s;
                         }
                     }
                     .add_to_basket {
@@ -1380,18 +1420,33 @@ button:hover {
 
 .tooltip {
     position: absolute;
-//    top: 50%;
-//    left: 50%;
-//    transform: translate(-50%, -50%);
+    //    top: 50%;
+    //    left: 50%;
+    //    transform: translate(-50%, -50%);
+    //    bottom: 100%;
+    //    left: 0;
     transform: translate(-50%, -100%);
     padding: 30px 20px;
     background-color: $white;
     box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.2);
     background-color: $white;
-    max-width: 220px;
+    width: 220px;
     color: $dark;
     z-index: 1;
     display: none;
+    &.closeToLeft {
+        transform: translate(-10%, -100%);
+    }
+    &.closeToLeft:after {
+        left: 10%;
+    }
+//    &.closeToRight {
+//        transform: translate(-83%, -100%);
+//    }
+//    &.closeToRight:after {
+//        left: auto;
+//        right: 10%;
+//    }
     &:before {
         content: "";
         position: absolute;

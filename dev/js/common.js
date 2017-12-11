@@ -76,7 +76,7 @@ $(document).ready(function () {
     //carousel function
 
     (function carousel() {
-        let corousel_container = $(".corousel_container"),
+        let corousel_container = $(".carousel_container"),
             carousel_item = corousel_container.find(".item"),
             item_amount = carousel_item.length;
 
@@ -144,60 +144,36 @@ $(document).ready(function () {
     })();
 
     (function showTooltip() {
-        let tooltip = $(".tooltip").eq(0);
-        $(".show_tooltip").on("mouseover", function () {
-            let topOffset = $(this).offset().top,
-                leftOffset = $(this).offset().left;
-            tooltip.css({
-                left: leftOffset + 20,
-                top: topOffset - 15
-            }).stop().slideDown();
+        let tooltip = $(".tooltip").eq(0),
+            clonedTooltip,
+            closeButtonForClonedTooltip;
+        
+        $(".show_tooltip").on({
+            mouseenter: function () {
+
+                let topOffset = $(this).offset().top,
+                    leftOffset = $(this).offset().left,
+                    positionedClass;
+
+                if (leftOffset < 95) positionedClass = "closeToLeft";
+
+                this_target = $(this);
+                clonedTooltip = tooltip.clone().addClass("active-tooltip").addClass(positionedClass);
+                closeButtonForClonedTooltip = clonedTooltip.find(".close_tooltip");
+                clonedTooltip.prependTo("body").css({
+                    left: leftOffset + 20,
+                    top: topOffset - 15
+                }).stop().slideDown();
+            },
+            mouseleave: function () {
+                setTimeout(function () {
+                    clonedTooltip.slideUp();
+                }, 200);
+            }
         });
-        $(".show_tooltip").on("mouseleave", function () {
-            setTimeout(function(){
-                tooltip.stop().slideUp();
-            }, 1000);
-        });
-        $(".close_tooltip").on("click", function () {
+
+        $("body").on("click", ".close_tooltip", function () {
             $(this).parent().slideUp();
         });
     })();
-
 });
-
-
-
-
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
-/**/
